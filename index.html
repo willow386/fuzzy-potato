@@ -26,6 +26,7 @@
         font-family: "Lato", sans-serif;
         display: flex;
         flex-direction: column;
+        background-attachment: fixed; /* Fix the background to prevent duplication */
       }
 
       .navbar {
@@ -72,7 +73,7 @@
         border: none;
         border-radius: 50px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease, transform 0.3s ease; /* Include transform in transition */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
@@ -95,14 +96,14 @@
         font-size: 80px;
         font-family: "Ubuntu", sans-serif;
         margin: 0; /* Remove excess margin */
-        color: #222;
+        color: white; /* Change text color to white */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
       }
 
       .small {
         font-size: 18px;
         margin: 10px 0; /* Adjust spacing */
-        color: #333;
+        color: white; /* Change text color to white */
         line-height: 1.6;
       }
 
@@ -117,7 +118,7 @@
         border-radius: 50px;
         cursor: pointer;
         text-align: center;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease, transform 0.3s ease; /* Include transform in transition */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
@@ -152,10 +153,12 @@
 
         .superlarge {
           font-size: 50px;
+          color: white; /* Ensure text color is white */
         }
 
         .small {
           font-size: 14px;
+          color: white; /* Ensure text color is white */
         }
 
         .action {
@@ -178,11 +181,11 @@
 
         html,
         body {
-          padding-top: 60px; /* Add padding to prevent overlap */
+          padding-top: 60px;
           background-image: url("./images/bike2.jpg");
-          background-size: cover; /* Ensure the image covers the entire viewport */
-          background-repeat: no-repeat; /* Prevent duplication of the image */
-          background-position: center; /* Center the image */
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
         }
       }
 
@@ -194,10 +197,12 @@
 
         .superlarge {
           font-size: 40px;
+          color: white; /* Ensure text color is white */
         }
 
         .small {
           font-size: 12px;
+          color: white; /* Ensure text color is white */
         }
 
         .action {
