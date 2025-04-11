@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Thrive Fitness</title>
+    <meta
+      name="description"
+      content="Join Thrive Fitness to unlock your fitness potential, connect with expert trainers, and achieve your personal best in a supportive community."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./fonts.css" />
+    <style>
+      html,
+      body {
+        background-image: url("./images/bike.jpg");
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: lightgrey;
+        background-size: cover; /* Ensure the image covers the entire viewport */
+        background-repeat: no-repeat; /* Prevent duplication of the image */
+        background-position: center; /* Center the image */
+        scroll-behavior: smooth;
+        font-family: "Lato", sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Slightly opaque background */
+        padding: 15px 30px; /* Increase padding for a larger navbar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar a {
+        font-size: 22px; /* Increase font size */
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #b98514;
+      }
+
+      .navbar a.active {
+        font-weight: bold;
+        color: #b98514;
+      }
+
+      .signup {
+        background: linear-gradient(45deg, #ff7e5f, #feb47b);
+        color: white;
+        font-size: 24px; /* Further increase font size */
+        text-decoration: none;
+        padding: 15px 30px; /* Further increase padding */
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .signup:hover {
+        background: linear-gradient(45deg, #feb47b, #ff7e5f);
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      main {
+        flex: 1; /* Ensure the main content fills the remaining space */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .superlarge {
+        font-size: 80px;
+        font-family: "Ubuntu", sans-serif;
+        margin: 0; /* Remove excess margin */
+        color: #222;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      .small {
+        font-size: 18px;
+        margin: 10px 0; /* Adjust spacing */
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .action {
+        display: inline-block;
+        font-size: 28px; /* Further increase font size */
+        margin: 20px 0; /* Adjust spacing */
+        padding: 18px 35px; /* Further increase padding */
+        background: linear-gradient(45deg, #42e695, #3bb2b8);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer-logos img {
+        width: 50px;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .footer-logos img:hover {
+        transform: scale(1.2);
+      }
+
+      .footer-text {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      @media (max-width: 768px) {
+        .navbar a {
+          font-size: 16px;
+          margin: 0 10px;
+        }
+
+        .superlarge {
+          font-size: 50px;
+        }
+
+        .small {
+          font-size: 14px;
+        }
+
+        .action {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+
+        .signup {
+          font-size: 16px;
+          padding: 8px 15px;
+        }
+
+        .footer-logos img {
+          width: 40px;
+        }
+
+        .footer-text {
+          font-size: 12px;
+        }
+
+        html,
+        body {
+          padding-top: 60px; /* Add padding to prevent overlap */
+          background-image: url("./images/bike2.jpg");
+          background-size: cover; /* Ensure the image covers the entire viewport */
+          background-repeat: no-repeat; /* Prevent duplication of the image */
+          background-position: center; /* Center the image */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar a {
+          font-size: 14px;
+          margin: 0 5px;
+        }
+
+        .superlarge {
+          font-size: 40px;
+        }
+
+        .small {
+          font-size: 12px;
+        }
+
+        .action {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
+
+        .signup {
+          font-size: 14px;
+          padding: 8px 15px;
+        }
+
+        .footer-logos img {
+          width: 30px;
+        }
+
+        .footer-text {
+          font-size: 10px;
+        }
+
+        html,
+        body {
+          padding-top: 60px; /* Add padding to prevent overlap */
+          background-image: url("./images/bike2.jpg");
+          background-size: cover; /* Ensure the image covers the entire viewport */
+          background-repeat: no-repeat; /* Prevent duplication of the image */
+          background-position: center; /* Center the image */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#about-us" class="active">About Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#trainer">Trainer</a>
+        <a href="#our-app">Our App</a>
+        <a href="#signup" class="signup">Signup</a>
+      </nav>
+    </header>
+    <main>
+      <p class="superlarge">Unlock your <br />fitness potential.</p>
+      <p class="small">
+        Join our fitness community and achieve your personal best. <br />
+        Experience personalized training, group classes, and a supportive
+        environment designed to help you thrive.
+      </p>
+      <button class="action">Join Now!</button>
+    </main>
+    <footer>
+      <div class="footer-logos">
+        <img src="./images/health.png" alt="Health Logo" />
+        <img src="./images/city.png" alt="City Logo" />
+        <img src="./images/fitness.png" alt="Fitness Logo" />
+      </div>
+      <p class="footer-text">© 2025 Thrive Fitness. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
